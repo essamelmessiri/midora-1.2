@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 7%; /* #121212 */
+    --foreground: 0 0% 98%; /* Near white text */
+
+    --card: 0 0% 10%; /* Slightly lighter than background */
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 221 76% 57%; /* Royal Blue #4169E1 */
+    --primary-foreground: 0 0% 98%; /* White text on blue */
+
+    --secondary: 0 0% 15%; /* Darker gray for secondary elements */
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 20%; /* Adjusted for better visibility on dark bg */
+    --muted-foreground: 0 0% 65%; /* Lighter gray for muted text */
+
+    --accent: 51 100% 50%; /* Gold #FFD700 */
+    --accent-foreground: 0 0% 7%; /* Dark text on gold */
+
+    --destructive: 0 72% 51%; /* Standard destructive red */
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 18%; /* Subtle borders, slightly lighter than 15% */
+    --input: 0 0% 18%;
+    --ring: 221 76% 57%; /* Royal Blue for focus rings */
+    
+    --chart-1: 221 76% 57%; /* Primary */
+    --chart-2: 51 100% 50%; /* Accent */
+    --chart-3: 173 58% 39%; /* A Teal/Greenish for variety */
+    --chart-4: 43 74% 66%; /* An Orange */
+    --chart-5: 27 87% 67%; /* A Lighter Orange/Peach */
+
+    --radius: 0.5rem;
+
+    /* Sidebar specific variables, can inherit or be fine-tuned */
+    --sidebar-background: 0 0% 8%; /* Slightly different from main bg */
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 221 76% 57%; /* Royal Blue */
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 51 100% 50%; /* Gold for hover/active states */
+    --sidebar-accent-foreground: 0 0% 7%; /* Dark text on gold */
+    --sidebar-border: 0 0% 15%;
+    --sidebar-ring: 221 76% 57%; /* Royal blue for focus rings */
+  }
+
+  /* Enforce dark theme by default if not using a theme switcher */
+  /* If a theme switcher is ever added, these would go under .dark {} */
+  /* For now, these are the direct root values. */
+
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}
